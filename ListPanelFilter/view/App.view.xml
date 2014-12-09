@@ -1,0 +1,33 @@
+<mvc:View
+  controllerName="srs.view.App"
+  displayBlock="true"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m" >
+  <App
+    id="idApp" >
+    <pages>
+      <Page title="UI5 List: Expandable Panels with Search " >
+		<subHeader>
+		  <Bar id="searchBar">
+		    <contentMiddle>
+		      <SearchField id="idSearchField" liveChange="onSearch" />
+		    </contentMiddle>
+		  </Bar>
+		</subHeader>
+        <content>
+          <List id="idList" items="{/ItemSet}" >
+            <items>
+              <CustomListItem>
+                <Panel expandable="true" expanded="false" headerText="{Header}" >    
+                  <content>
+                    <Text text="{Content}" />
+                  </content>
+                </Panel>
+              </CustomListItem> 
+            </items>
+          </List>
+        </content>		
+      </Page>			
+    </pages>
+  </App>
+</mvc:View>
